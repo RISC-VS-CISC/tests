@@ -1,8 +1,11 @@
 //# include <stdint.h>
 typedef unsigned int uint32_t;
-# define UART_BASE_ADDR 0xff900000 //0xfc001000
+
+// 0xfc001000 is the UART register for non CFI
+// 0xff900000 is the UART register for CFI
+# define UART_BASE_ADDR 0xff900000 
 # define CLOCK_FREQUENCY 40000000
-# define BUFF_FULL 0x200
+# define BUFF_FULL 0x200 // Buffer offset
 
 typedef struct UART 
 {
